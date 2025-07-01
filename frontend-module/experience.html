@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>FAST Airlines | Experience</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(to bottom, #16498C, #0072C6);
+            color: #fff;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: #0093DD;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        /* Navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .experience-container {
+            padding: 30px;
+        }
+
+        .experience-container h2 {
+            text-align: center;
+            color: #F2B705;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex-basis: 30%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .feature h3 {
+            color: #F2B705;
+            margin-top: 15px;
+            font-size: 1.5em;
+        }
+
+        .feature p {
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #16498C;
+            padding: 15px 0;
+            text-align: center;
+            color: #fff;
+            font-size: 1em;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                flex-basis: 80%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FAST Airlines</h1>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="Main Home Page.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="experience-container">
+        <h2>Your Premium Flight Experience</h2>
+        
+        <div class="features">
+            <div class="feature">
+                <img src="../images/comfortable.jpeg" alt="Comfortable Seats">
+                <h3>Comfortable Seats</h3>
+                <p>Relax and enjoy your flight in our comfortable, spacious seats designed for your comfort.</p>
+            </div>
+
+            <div class="feature">
+                <img src="../images/excellent.jpeg" alt="Excellent Service">
+                <h3>Excellent Service</h3>
+                <p>Our crew is dedicated to providing top-notch service to ensure your journey is smooth and pleasant.</p>
+            </div>
+
+            <div class="feature">
+                <img src="../images/smooth.jpg" alt="Smooth Flight">
+                <h3>Smooth Flight</h3>
+                <p>With state-of-the-art aircraft and a dedicated flight crew, experience the smoothest flight possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FAST Airlines. All rights reserved.</p>
+    </footer>
+</body>
+</html>

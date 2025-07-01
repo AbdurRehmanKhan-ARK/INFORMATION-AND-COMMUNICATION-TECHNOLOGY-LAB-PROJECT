@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>FAST Airlines | Login</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #16498C, #0072C6);
+            background-repeat: no-repeat;
+            color: #ffffff;
+        }
+
+        /* Container */
+        .box {
+            width: 100%;
+            max-width: 420px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Header Branding */
+        .header {
+            background: #0093DD;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* Form Styles */
+        form {
+            padding: 30px 25px;
+        }
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #F2B705;
+            font-size: 1.6em;
+        }
+        .inputBox {
+            margin-top: 20px;
+            position: relative;
+        }
+        .inputBox input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 1em;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #16498C;
+            transition: all 0.3s;
+        }
+        .inputBox input:focus {
+            background: #ffffff;
+            border: 2px solid #16498C;
+        }
+        .inputBox span {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            color: #16498C;
+            font-size: 0.9em;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        .inputBox input:focus + span,
+        .inputBox input:not(:placeholder-shown) + span {
+            top: -15px;
+            left: 10px;
+            color: #F2B705;
+            font-size: 0.8em;
+        }
+
+        /* Links */
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .links a {
+            color: #F2B705;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .register-link {
+            margin-top: 10px;
+            text-align: center;
+            color: #F4F4F4;
+        }
+        .register-link a {
+            color: #F2B705;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #F2B705;
+            color: #16498C;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #16498C;
+            color: #ffffff;
+        }
+
+        /* Error Message */
+        .error-message {
+            display: none;
+            text-align: center;
+            color: #FF5252;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .error-message.visible {
+            display: block;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 480px) {
+            .box {
+                margin: 10px;
+            }
+            .header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <h1>FAST Airlines</h1>
+        </div>
+        <form onsubmit="return validateLogin();">
+            <h2>Login</h2>
+            <div class="inputBox">
+                <input type="text" id="username" required placeholder=" " aria-label="Username">
+                <span>Username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" id="password" required placeholder=" " aria-label="Password">
+                <span>Password</span>
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a href="Registration Page new.html">Register</a>
+            </div>
+            <input type="submit" value="Login">
+            <div class="error-message" id="error-message">Invalid credentials! Please try again.</div>
+        </form>
+    </div>
+
+    <script>
+        const credentials = {
+        faizan: "bluenet0",
+        sufyan: "googleit0",
+        rehman: "megait0"
+    };
+
+
+        function validateLogin() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorMessage = document.getElementById("error-message");
+
+            if (credentials[username] === password) {
+                window.location.href = "Main Home Page.html";
+                return false;
+            } else {
+                errorMessage.classList.add("visible");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

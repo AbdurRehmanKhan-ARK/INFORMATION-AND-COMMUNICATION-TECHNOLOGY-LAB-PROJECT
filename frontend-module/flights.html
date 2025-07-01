@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights - FAST Airlines</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(to bottom, #16498C, #0072C6); }
+        header { background: #0093DD; padding: 20px; color: white; text-align: center; }
+        header h1 { margin: 0; }
+        h2 {color: #F2B705; }
+        nav ul { list-style: none; text-align: center; padding: 10px 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 18px; }
+        .search-container { padding: 40px 10%; text-align: center; }
+        .search-container input, .search-container select { padding: 10px; margin: 10px; width: 200px; }
+        .search-container button { padding: 10px 20px; background-color: #007bb5; color: white; border: none; cursor: pointer; }
+        .search-container button:hover { background-color: #005f87; }
+        .flight-list { padding: 20px 10%; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        .flight-card { background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 250px; text-align: center; }
+        .flight-card h3 { color: #005f87; margin: 0; }
+        .flight-card p { font-size: 1.1em; margin: 10px 0; }
+        .flight-card button { padding: 10px 20px; background-color: #007bb5; color: white; border: none; cursor: pointer; }
+        .flight-card button:hover { background-color: #005f87; }
+        footer { background: #0093DD; color: white; text-align: center; padding: 15px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FAST Airlines</h1>
+        <nav>
+            <ul>
+                <li><a href="Main Home Page.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <h2>Search for Flights</h2>
+        <form>
+            <input type="text" placeholder="From" id="from" required>
+            <input type="text" placeholder="To" id="to" required>
+            <select id="class" required>
+                <option value="">Select Class</option>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First Class</option>
+            </select>
+            <input type="date" id="date" required>
+            <button class="search-flight" type="submit">Search Flights</button>
+        </form>
+    </div>
+
+    <div class="flight-list">
+        <div class="flight-card">
+            <h3>Flight PK204</h3>
+            <p>From: Karachi</p>
+            <p>To: London</p>
+            <p>Departure: 15-11-2024, 13:00</p>
+            <p>Class: Economy</p>
+            <button>Book Now</button>
+        </div>
+        <div class="flight-card">
+            <h3>Flight PK305</h3>
+            <p>From: Lahore</p>
+            <p>To: New York</p>
+            <p>Departure: 16-11-2024, 09:00</p>
+            <p>Class: Business</p>
+            <button>Book Now</button>
+        </div>
+        <div class="flight-card">
+            <h3>Flight PK410</h3>
+            <p>From: Islamabad</p>
+            <p>To: Dubai</p>
+            <p>Departure: 17-11-2024, 18:00</p>
+            <p>Class: First Class</p>
+            <button>Book Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FAST Airlines. All rights reserved.</p>
+    </footer>
+</body>
+</html>
