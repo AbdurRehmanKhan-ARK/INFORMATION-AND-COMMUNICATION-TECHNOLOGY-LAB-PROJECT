@@ -111,8 +111,7 @@ This project deepened our understanding of:
 
 ## 📜 License
 
-This repository is maintained under an **educational license**.  
-Feel free to fork, explore, or modify — but not for commercial use.
+This repository is maintained under an **educational license**.
 
 ---
 
